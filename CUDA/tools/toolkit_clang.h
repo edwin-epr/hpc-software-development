@@ -1,7 +1,12 @@
-#include "toolkit_clang.h"
+#ifndef TOOLKIT_CLANG_H
+#define TOOLKIT_CLANG_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 // Error handler
-void errorHandler(char error_string[])
+void errorHandler(const char error_string[])
 {
     fprintf(stderr, "C language runtime error...\n");
     fprintf(stderr, "%s\n", error_string);
@@ -68,3 +73,5 @@ void printMatrix(double *matrix, int rows, int columns)
     }
     printf("\n");
 }
+
+#endif
